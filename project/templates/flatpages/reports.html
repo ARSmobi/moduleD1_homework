@@ -1,13 +1,14 @@
 {% extends 'flatpages/default.html' %}
 
 {% block content %}
+{% load static %}
 <section class="py-5">
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <h2 class="fst-italic">{{ flatpage.title }}</h2>
-                <p class="lead fst-italic">{{ flatpage.content }}</p>
-                <p class="lead fst-italic">{{ flatpage.content }}</p>
+                <img src="{% static 'assets/oops.png' %}" width="300px" alt="oops">
+                <p>{{ flatpage.content }}</p>
             </div>
         </div>
     </div>

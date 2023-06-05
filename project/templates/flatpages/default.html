@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Full Width Pics - Start Bootstrap Template</title>
+        {% load static %}
+        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/home/">Всё о птицах</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/reports/">Наши статьи</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">О нас</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contacts/">Контакты</a></li>
+                        <li><hr style="color: white"></li>
+                        <li class="nav-item"><a class="nav-link" href="/newpage/">Только для авторизованных</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header - set the background image for the header in the line below-->
+        <header class="py-5 bg-image-full" style="background-image: url('https://wallart.ua/wplg/26558-orig.jpg')">
+            <div class="text-center my-5">
+                <img class="img-fluid rounded-circle mb-4" src="https://i.pinimg.com/736x/d6/7b/9a/d67b9a0cd5a9b7d86dd33f97c56b1e30--calendar-wall-wall-calendars.jpg" alt="..." />
+                <h1 class="text-white fs-3 fw-bolder">Птицы мира</h1>
+                <p class="text-white-50 mb-0">Просто об удивительном</p>
+            </div>
+        </header>
+        <!-- Content section-->
+
+        {% block content %}
+        {% endblock content %}
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+    </body>
 </html>

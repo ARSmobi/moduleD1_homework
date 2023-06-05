@@ -1,10 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+{% load static %}
+<style>
+    @font-face {
+        font-family: 'Evgenia Deco';
+        src: url({% static 'fonts/evgenia_deco.eot' %}); /* IE 9 Compatibility Mode */
+        src: url({% static 'fonts/evgenia_deco.eot?#iefix' %}) format('embedded-opentype'), /* IE < 9 */
+            url({% static 'fonts/evgenia_deco.woff2' %}) format('woff2'), /* Super Modern Browsers */
+            url({% static 'fonts/evgenia_deco.woff' %}) format('woff'), /* Firefox >= 3.6, any other modern browser */
+            url({% static 'fonts/evgenia_deco.ttf' %}) format('truetype'), /* Safari, Android, iOS */
+            url({% static 'fonts/evgenia_deco.svg#evgenia_deco' %}) format('svg'); /* Chrome < 4, Legacy iOS */
+    }
+    .font-evgenia_deco {
+        font-family: 'Evgenia Deco';
+    }
+</style>
+<section class="py-5 font-evgenia_deco">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2>{{ flatpage.title }}</h2>
+                <p class="lead">{{ flatpage.content }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
